@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title><a href="College Events Public.html">College Events</a> Directory</title>
+  <link rel="stylesheet" href="Student Events Public.css">
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="NexCampus Logo" style="height: 80px;"/>
+    <h1>&nbsp; <a href="College Events Public.html">College Events</a> Directory</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- Search and Filter Section -->
+    <div class="search-filter">
+      <input type="text" id="searchInput" placeholder="Search events or colleges..." />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Technical">Technical</option>
+        <option value="Cultural">Cultural</option>
+        <option value="Management">Management</option>
+        <option value="Sports">Sports</option>
+      </select>
+    </div>
+
+    <!-- Event List -->
+    <div class="event-list" id="eventList">
+      <div class="event" data-category="Technical">
+        <h3>AI Innovation Summit</h3>
+        <p><strong>College:</strong> Tech University</p>
+        <p><strong>Date:</strong> 2025-05-25</p>
+        <p><strong>Type:</strong> Technical</p>
+        <small>Description: Explore the latest trends and research in Artificial Intelligence.</small>
+      </div>
+
+      <div class="event" data-category="Cultural">
+        <h3>National Cultural Fest</h3>
+        <p><strong>College:</strong> Indian Arts College</p>
+        <p><strong>Date:</strong> 2025-06-15</p>
+        <p><strong>Type:</strong> Cultural</p>
+        <small>Description: A celebration of music, dance, theater and tradition from across the country.</small>
+      </div>
+
+      <div class="event" data-category="Management">
+        <h3>Startup Pitch & Expo</h3>
+        <p><strong>College:</strong> Global Business School</p>
+        <p><strong>Date:</strong> 2025-07-01</p>
+        <p><strong>Type:</strong> Management</p>
+        <small>Description: Budding entrepreneurs pitch their startups in front of investors and mentors.</small>
+      </div>
+
+      <div class="event" data-category="Sports">
+        <h3>Inter-College Football Cup</h3>
+        <p><strong>College:</strong> National Sports Academy</p>
+        <p><strong>Date:</strong> 2025-08-10</p>
+        <p><strong>Type:</strong> Sports</p>
+        <small>Description: Colleges compete in an exciting football tournament.</small>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const events = document.querySelectorAll('.event');
+
+    function filterEvents() {
+      const searchValue = searchInput.value.toLowerCase();
+      const selectedCategory = categoryFilter.value;
+
+      events.forEach(event => {
+        const title = event.querySelector('h3').textContent.toLowerCase();
+        const college = event.querySelector('p').textContent.toLowerCase();
+        const category = event.getAttribute('data-category');
+
+        const matchesSearch = title.includes(searchValue) || college.includes(searchValue);
+        const matchesCategory = selectedCategory === "all" || category === selectedCategory;
+
+        if (matchesSearch && matchesCategory) {
+          event.style.display = "block";
+        } else {
+          event.style.display = "none";
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterEvents);
+    categoryFilter.addEventListener('change', filterEvents);
+  </script>
+
+</body>
+</html>

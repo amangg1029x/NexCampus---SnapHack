@@ -1,0 +1,93 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #2b2b2b;
+}
+
+/* Container */
+.container {
+  padding: 100px 5% 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main Title */
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b31b1b;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid #b31b1b;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header */
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: white;
+  background-color: #b31b1b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(179, 27, 27, 0.3);
+}
+
+/* List Style */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List Item */
+.card li {
+  background-color: #fff5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: inset 0 0 4px #ffdada;
+}
+
+/* Highlighted Label */
+.card li strong {
+  color: #b31b1b;
+  font-weight: 600;
+}
+.page-header {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 1000;
+}
+
+.logo {
+  height: 55px;
+  width: 60px;
+  border-radius: 8px;
+}

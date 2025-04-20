@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><a href="College Events Public.html">College Events</a></title>
+  <link rel="stylesheet" href="College Events.css" />
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="NexCampus Logo" style="height: 80px;">
+    <h1>&nbsp; <a href="College Events Public.html">College Events</a></h1>
+  </header>
+
+  <div class="container">
+    <h2>Upcoming Events</h2>
+    <br><br>
+    <div class="event">
+      <h3>Tech Fest 2025</h3>
+      <p><strong>Date:</strong> 2025-05-10</p>
+      <p>Join us for a two-day event filled with tech talks, workshops, and coding challenges.</p>
+    </div>
+
+    <div class="event">
+      <h3>Cultural Day</h3>
+      <p><strong>Date:</strong> 2025-05-20</p>
+      <p>Showcase your talent in music, dance, and art. Open to all departments.</p>
+    </div>
+
+    <form>
+      <h2>Add New Event</h2>
+
+      <label for="event-title">Event Title</label>
+      <input type="text" id="event-title" name="event-title" placeholder="Enter event name" required disabled>
+
+      <label for="event-date">Event Date</label>
+      <input type="date" id="event-date" name="event-date" required disabled>
+
+      <label for="event-description">Description</label>
+      <textarea id="event-description" name="event-description" rows="4" placeholder="Event details..." required disabled></textarea>
+
+      <button type="submit" disabled>Add Event</button>
+      <p class="note">* Form submission needs JavaScript or backend integration to function.</p>
+    </form>
+  </div>
+
+</body>
+</html>

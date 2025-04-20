@@ -1,0 +1,120 @@
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: default;
+    user-select: none;
+}
+.logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+    filter: brightness(90%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5)), url('college.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.login-container {
+    background-color: #ffffffcc;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 380px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+}
+
+.login-container h2 {
+    margin-bottom: 24px;
+    color: #333333;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555555;
+    text-align: left;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-form input:focus {
+    border-color: #ff0000;
+    outline: none;
+}
+
+.login-form button {
+    padding: 12px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #cc0000;
+}
+
+.register-redirect {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+}
+
+.register-redirect a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-redirect a:hover {
+    text-decoration: underline;
+}

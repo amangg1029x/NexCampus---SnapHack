@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Student Profile</h1>
+  <div id="profile">
+    <p><strong>Name:</strong> <span id="studentName"></span></p>
+    <p><strong>Roll Number:</strong> <span id="rollNumber"></span></p>
+    <p><strong>Course:</strong> <span id="course"></span></p>
+    <p><strong>Year:</strong> <span id="year"></span></p>
+    <p><strong>Branch:</strong> <span id="branch"></span></p>
+    <p><strong>Section:</strong> <span id="section"></span></p>
+    <p><strong>Father's Name:</strong> <span id="fathersName"></span></p>
+    <p><strong>Address:</strong> <span id="address"></span></p>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    const type = localStorage.getItem("userType");
+
+    if (!user || type !== "student") {
+      window.location.href = "student login.html?redirect=profile.html";
+    } else {
+      fetch(`/api/student/profile/${user.roll_number}`)
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("studentName").textContent = data.student_name;
+          document.getElementById("rollNumber").textContent = data.roll_number;
+          document.getElementById("course").textContent = data.course;
+          document.getElementById("year").textContent = data.year;
+          document.getElementById("branch").textContent = data.branch;
+          document.getElementById("section").textContent = data.section;
+          document.getElementById("fathersName").textContent = data.fathers_name;
+          document.getElementById("address").textContent = data.address;
+        })
+        .catch(err => {
+          alert("Failed to load profile.");
+          console.error(err);
+        });
+    }
+  </script>
+</body>
+</html>

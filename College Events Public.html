@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>College Event Portal</title>
+  <link rel="stylesheet" href="College Events Public.css"/>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="NexCampusLogo" style="height: 80px;" />
+    <h1>&nbsp; College Event Posting Portal</h1>
+  </header>
+
+  <div class="container">
+
+    <h2>📅 Posted Events</h2>
+
+    <div class="event">
+      <h3>Inter-College Tech Symposium</h3>
+      <p><strong>College:</strong> Future Institute of Technology</p>
+      <p><strong>Date:</strong> 2025-05-15</p>
+      <p><strong>Description:</strong> A national level symposium featuring tech paper presentations, hackathons, and guest lectures.</p>
+    </div>
+
+    <div class="event">
+      <h3>Management Conclave 2025</h3>
+      <p><strong>College:</strong> Global Business School</p>
+      <p><strong>Date:</strong> 2025-06-05</p>
+      <p><strong>Description:</strong> A conference focusing on modern business strategies and market innovations.</p>
+    </div>
+
+    <h2>📝 Upload New Event</h2>
+    <div class="form-section">
+      <form>
+        <label for="college-name">College Name</label>
+        <input type="text" id="college-name" name="college-name" required disabled>
+
+        <label for="event-title">Event Title</label>
+        <input type="text" id="event-title" name="event-title" required disabled>
+
+        <label for="event-date">Event Date</label>
+        <input type="date" id="event-date" name="event-date" required disabled>
+
+        <label for="description">Event Description</label>
+        <textarea id="description" name="description" rows="4" required disabled></textarea>
+
+        <button type="submit" disabled>Post Event</button>
+        <p class="note">* Form is disabled for now. Backend or JavaScript integration needed for live submission.</p>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

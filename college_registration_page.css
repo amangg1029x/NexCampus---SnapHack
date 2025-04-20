@@ -1,0 +1,166 @@
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: default;
+    user-select: none;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+    filter: brightness(90%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.logo img:hover {
+    opacity: 1;
+    filter: brightness(100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5)), url('college.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.registration-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    position: relative;
+    z-index: 1;
+}
+
+.registration-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222222;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registration-container {
+    background-color: #ffffffcc;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 380px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+}
+
+.registration-container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.registration-form {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.registration-form textarea {
+    resize: vertical;
+    margin-bottom: 5px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 5px 0 #cc0000, 5px 8px 15px rgba(255, 0, 0, 0.4);
+}
+
+.registration-form button:hover {
+    background-color: #cc0000;
+    box-shadow: 0 7px 0 #990000, 7px 10px 20px rgba(204, 0, 0, 0.6);
+}
+
+.registration-form button:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="password"]:focus,
+.registration-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px 2px rgba(255, 0, 0, 0.7);
+    border-color: #ff0000;
+}
+
+.login-redirect {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+}
+
+.login-redirect a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}

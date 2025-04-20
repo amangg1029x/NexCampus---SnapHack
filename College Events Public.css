@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+  }
+
+  header {
+    background-color: #b31b1b;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  h2 {
+    color: #b71c1c;
+    border-bottom: 2px solid #b71c1c;
+    padding-bottom: 5px;
+    margin-top: 40px;
+  }
+
+  .event {
+    border: 1px solid #ccc;
+    border-left: 5px solid #b71c1c;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+  }
+
+  .event h3 {
+    margin: 0;
+    color: #b71c1c;
+  }
+
+  .event p {
+    margin: 5px 0;
+  }
+
+  .form-section {
+    background-color: #fff5f5;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #f3cccc;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #b71c1c;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    margin-top: 20px;
+    background-color: #b71c1c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  .note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+  }

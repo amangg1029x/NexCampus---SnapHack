@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fff0f0;
+  }
+
+  header {
+    background-color: #b31b1b;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  /* Hide radio buttons */
+  .tabs input[type="radio"] {
+    display: none;
+  }
+
+  .tab-labels {
+    display: flex;
+    background: #b22222;
+  }
+
+  .tab-labels label {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background: #b22222;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .tab-labels label:hover {
+    background: #800000;
+  }
+
+  .tab-content {
+    display: none;
+    background: white;
+    padding: 20px;
+    border: 1px solid #cc0000;
+  }
+
+  input#tab1:checked ~ .content #content1,
+  input#tab2:checked ~ .content #content2,
+  input#tab3:checked ~ .content #content3,
+  input#tab4:checked ~ .content #content4 {
+    display: block;
+  }
+
+  .content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  .content th, .content td {
+    border: 1px solid #cc0000;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .content th {
+    background-color: #ffe6e6;
+  }

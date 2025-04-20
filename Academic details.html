@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Academic Details</title>
+  <link rel="stylesheet" href="Academic Details.css" />
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="NexCampus Logo" style="height:80px;">
+    <div>
+      <h1>Student Academic Details</h1>
+      <p>ERP Portal</p>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <!-- Radio buttons -->
+    <input type="radio" name="tab" id="tab1" checked>
+    <input type="radio" name="tab" id="tab2">
+    <input type="radio" name="tab" id="tab3">
+    <input type="radio" name="tab" id="tab4">
+
+    <!-- Tab Labels -->
+    <div class="tab-labels">
+      <label for="tab1">Timetable</label>
+      <label for="tab2">Attendance</label>
+      <label for="tab3">Assignments</label>
+      <label for="tab4">Fees</label>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="content">
+      <div class="tab-content" id="content1">
+        <h2>Timetable</h2>
+        <table>
+          <tr><th>Day</th><th>9-10</th><th>10-11</th><th>11-12</th></tr>
+          <tr><td>Mon</td><td>Math</td><td>Physics</td><td>English</td></tr>
+        </table>
+      </div>
+
+      <div class="tab-content" id="content2">
+        <h2>Attendance</h2>
+        <table>
+          <tr><th>Subject</th><th>Total</th><th>Attended</th><th>%</th></tr>
+          <tr><td>Math</td><td>30</td><td>28</td><td>93%</td></tr>
+        </table>
+      </div>
+
+      <div class="tab-content" id="content3">
+        <h2>Assignments</h2>
+        <table>
+          <tr><th>Subject</th><th>Task</th><th>Due</th><th>Status</th></tr>
+          <tr><td>CS</td><td>Project</td><td>25-Apr</td><td>Pending</td></tr>
+        </table>
+      </div>
+
+      <div class="tab-content" id="content4">
+        <h2>Fees</h2>
+        <table>
+          <tr><th>Type</th><th>Amount</th><th>Status</th></tr>
+          <tr><td>Tuition</td><td>2000</td><td>Paid</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
